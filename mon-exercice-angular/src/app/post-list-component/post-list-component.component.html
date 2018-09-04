@@ -1,0 +1,10 @@
+<li [ngClass]="{'list-group-item': true}" [ngStyle]="{color: getColor(),
+  background: getBackGroundColor()}">
+  <div class="container  row">
+    <h4 class="col-xs-10" style="font-weight: bold;">{{ postTitle }}</h4>
+    <p class="col-xs-2" style="color: gray;font-size: medium;">{{dateCreate | async | date: 'short'}}</p>
+  </div>
+<p>{{postContent}}</p>
+<button class="btn btn-success" (click) = 'onLoveIt()'>Love it!</button>
+  <button class="btn btn-danger" style="margin-left: 5px;" (click)='onDoNotloveIt()'>Don't love it!</button>
+ </li>
